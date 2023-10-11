@@ -1,7 +1,7 @@
-require './card'
-require './deck'
-require './turn'
-require './round'
+require './lib/card'
+require './lib/deck'
+require './lib/turn'
+require './lib/round'
 require 'pry'
 
 card_1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
@@ -10,6 +10,16 @@ card_3 = Card.new("Describe in words the exact direction that is 697.5° clockwi
 
 cards = [card_1, card_2, card_3]
 
+p card_1.question
+p card_1.answer
+p card_1.category
+
+turn = Turn.new("Saturn", card_1)
+
+p turn.card
+p turn.guess
+p turn.correct?
+p turn.feedback
+
 deck = Deck.new(cards)
 
-binding.pry

@@ -5,7 +5,7 @@ class Deck
 	end
 # deck count method
   def count
-    p @cards.length
+    @cards.count
   end
 # category method
   # needs to put cards into a category
