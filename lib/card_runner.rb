@@ -22,4 +22,17 @@ p turn.correct?
 p turn.feedback
 
 deck = Deck.new(cards)
+deck.count
+deck.cards_in_category(:STEM)
+deck.cards_in_category(:Geography)
+deck.cards_in_category("Pop Culture")
 
+round = Round.new(deck)
+round.deck
+round.turns
+round.current_card
+new_turn = round.take_turn("Juneau")
+
+#new_turn.correct? (NOT WORKING)
+
+round.turns
